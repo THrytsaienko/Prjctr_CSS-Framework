@@ -1,0 +1,10 @@
+.footer__text {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #f00;
+}
+
+.navbar-brand {
+  color: #000;
+}
