@@ -1,8 +1,9 @@
 mixin b-gallery(listPhotos)
-    .container
-        h2 Our Recent Work
-        .row
-            each item in listPhotos
-                .col-md-3.py-2
-                    img.img-fluid.img-thumbnail(src= item.src, alt= item.alt)
-        hr
+    +b.gallery
+        .container
+            +e('h2').title Our Recent Work
+            .row
+                each item in listPhotos
+                    .col-md-3.py-2
+                        +e('img').image.img-fluid.img-thumbnail(src= item.src, alt= item.alt)
+            hr

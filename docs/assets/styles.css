@@ -7,25 +7,29 @@ li {
   list-style: none;
 }
 
-a,
-a:hover {
-  text-decoration: none;
-}
-
-.text-primary {
+.features__number,
+.features__name {
   margin: 0;
 }
 
-.navbar {
+.features__link {
+  text-decoration: none;
+}
+
+.features__link:hover {
+  text-decoration: none;
+}
+
+.footer__navbar {
   margin: 0;
   padding: 0;
 }
 
-.btn {
+.header__btn {
   -webkit-border-radius: 0px !important;
   border-radius: 0px !important;
 }
 
-.navbar-brand {
+.navigation__brand {
   color: #000;
 }

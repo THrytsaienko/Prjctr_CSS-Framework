@@ -1,10 +1,11 @@
 mixin b-footer(menuItems)
-    .container
-        .row
-            .col
-                nav.navbar.navbar-expand-xs
-                    ul.navbar
-                        each item, index in menuItems
-                            if index < 4
-                                li.nav-item
-                                    a.nav-link.text-primary(href= item.url)= item.name
+    +b.footer
+        .container
+            .row
+                .col
+                    +e('nav').navbar.navbar.navbar-expand-xs
+                        +e('ul').navbar.navbar
+                            each item, index in menuItems
+                                if index < 4
+                                    +e('li').nav-item.nav-item
+                                        +e('a').nav-link.nav-link.text-primary(href= item.url)= item.name

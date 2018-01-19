@@ -1,21 +1,22 @@
 mixin b-features(listAdv, quantityWorks)
-    .container
-        .row
-            .col-md-6
-                h2 Our Agency, our selves.
-                p Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor.
-            .col-md-6
-                img.img-fluid.img-thumbnail(src="http://placehold.it/750x350", alt="Main image")
-        .row
-            each item in listAdv
-                .col-md-4
-                    h3.mt-4= item.title
-                    p= item.text
-        hr
-        .row.text-center
-            each item in quantityWorks
-                .col-sm-2.col-xs-6.ml-auto
-                    a(href="#")
-                        h1.text-primary= item.number
-                        span.text-primary= item.name
-        hr
+    +b.features
+        .container
+            .row
+                .col-md-6
+                    +e('h2').desc-title Our Agency, our selves.
+                    +e('p').desc-text Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor.
+                .col-md-6
+                    +e('img').image.img-fluid.img-thumbnail(src="http://placehold.it/750x350", alt="Main image")
+            .row
+                each item in listAdv
+                    +e.col-md-4.col-md-4
+                        +e('h3').title.mt-4= item.title
+                        +e('p').text= item.text
+            hr
+            .row.text-center
+                each item in quantityWorks
+                    +e.works.col-sm-2.col-xs-6.ml-auto
+                        +e('a').link(href="#")
+                            +e('h1').number.text-primary= item.number
+                            +e('span').name.text-primary= item.name
+            hr

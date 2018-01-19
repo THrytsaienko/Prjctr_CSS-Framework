@@ -1,16 +1,17 @@
 mixin b-navigation(menuItems)
-	.row
-		.col
-			nav.navbar.navbar-expand-sm.navbar-light.bg-light.border-bottom
-				.navbar-brand(href="#") Yeti Agency
-				button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav")
-					span.navbar-toggler-icon
-				.collapse.navbar-collapse(id="navbarNav")
-					ul.navbar-nav
-						each item, index in menuItems
-							if index === 1
-								li.nav-item.mr-auto
-									a.nav-link.text-primary(href= item.url)= item.name
-							else
-								li.nav-item
-									a.nav-link.text-primary(href= item.url)= item.name
+	+b.navigation
+		.row
+			.col
+				+e('nav').nav.navbar.navbar-expand-sm.navbar-light.bg-light.border-bottom
+					+e('a').brand.navbar-brand(href="#") Yeti Agency
+					+e('button').mobile-menu.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav")
+						+e('span').mobile-menu-icon.navbar-toggler-icon
+					+b.navbarNav.collapse.navbar-collapse(id="navbarNav")
+						+e('ul').list.navbar-nav
+							each item, index in menuItems
+								if index === 1
+									+e('li').nav-item.nav-item.mr-auto
+										+e('a').nav-link.nav-link.text-primary(href= item.url)= item.name
+								else
+									+e('li').nav-item.nav-item
+										+e('a').nav-item.nav-link.text-primary(href= item.url)= item.name
