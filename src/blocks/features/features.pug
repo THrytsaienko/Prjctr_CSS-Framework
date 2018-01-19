@@ -9,12 +9,12 @@ mixin b-features(listAdv, quantityWorks)
         .row
             each item in listAdv
                 .col-md-4
-                    h2.mt-4= item.title
+                    h3.mt-4= item.title
                     p= item.text
         hr
         .row.text-center
             each item in quantityWorks
-                .col-md-2.ml-auto
+                .col-sm-2.col-xs-6.ml-auto
                     a(href="#")
                         h1.text-primary= item.number
                         span.text-primary= item.name

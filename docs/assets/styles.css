@@ -27,6 +27,11 @@ li li {
   display: inline-block;
 }
 
+.btn {
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+
 .navbar-brand {
   color: #000;
 }
