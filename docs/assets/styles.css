@@ -16,6 +16,10 @@ a:hover {
   margin: 0;
 }
 
+.nav-item {
+  list-style: none;
+}
+
 .btn {
   -webkit-border-radius: 0px !important;
   border-radius: 0px !important;
