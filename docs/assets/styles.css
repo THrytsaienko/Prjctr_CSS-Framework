@@ -19,6 +19,14 @@ a:hover {
   color: #f00;
 }
 
+li {
+  list-style: none;
+}
+
+li li {
+  display: inline-block;
+}
+
 .navbar-brand {
   color: #000;
 }
