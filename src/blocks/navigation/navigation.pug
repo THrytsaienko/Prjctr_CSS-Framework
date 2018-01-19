@@ -1,12 +1,16 @@
 mixin b-navigation(menuItems)
 	.row
 		.col
-			nav.navbar.navbar-expand-lg.bg-light.border-bottom
+			nav.navbar.navbar-expand-sm.navbar-light.bg-light.border-bottom
 				.navbar-brand(href="#") Yeti Agency
-				button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
+				button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav")
 					span.navbar-toggler-icon
 				.collapse.navbar-collapse(id="navbarNav")
 					ul.navbar-nav
-						each item in menuItems
-							li.nav-item
-								a.nav-link.text-primary(href= item.url)= item.name
+						each item, index in menuItems
+							if index === 1
+								li.nav-item.mr-auto
+									a.nav-link.text-primary(href= item.url)= item.name
+							else
+								li.nav-item
+									a.nav-link.text-primary(href= item.url)= item.name
